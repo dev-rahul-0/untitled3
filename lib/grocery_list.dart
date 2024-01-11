@@ -8,7 +8,7 @@ class GroceryList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Your Groceries'),
+        title: const Text('Your Groceries'),
       ),
       body: ListView.builder(
           itemCount: groceryItems.length,
