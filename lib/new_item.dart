@@ -18,11 +18,21 @@ class _NewItemState extends State<NewItem> {
         child: Form(
           child: Column(
             children: [
-              TextField(
+              TextFormField(
                 maxLength: 50,
                 decoration: InputDecoration(
-
+                label: Text('Name'),
                 ),
+                validator: (value){
+                  return 'Demo...';
+                },
+              ),
+              Row(
+                children: [
+                  TextFormField(),
+                  SizedBox(width: 8,),
+                  DropdownButtonFormField(items: items, onChanged: onChanged)
+                ],
               )
             ],
           ),
