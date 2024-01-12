@@ -13,7 +13,10 @@ class _NewItemState extends State<NewItem> {
     appBar: AppBar(
       title: Text('Add a new item'),
     ),
-      body: Text('The Form'),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text('The Form'),
+      ),
     );
   }
 }
