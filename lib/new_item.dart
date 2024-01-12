@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled3/categories.dart';
 class NewItem extends StatefulWidget {
   const NewItem({super.key});
 
@@ -29,9 +30,21 @@ class _NewItemState extends State<NewItem> {
               ),
               Row(
                 children: [
-                  TextFormField(),
+                  TextFormField(
+                    decoration: InputDecoration(
+                      label: Text('Quantity'),
+                    ),
+                    initialValue: '1',
+                  ),
                   SizedBox(width: 8,),
-                  DropdownButtonFormField(items: items, onChanged: onChanged)
+                  DropdownButtonFormField(items: [
+                    for (final category in categories.entries)
+                      DropdownMenuItem(child: Row(
+                        children: [
+
+                        ],
+                      ))
+                  ], onChanged: onChanged)
                 ],
               )
             ],
