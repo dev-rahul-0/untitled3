@@ -10,7 +10,10 @@ class _NewItemState extends State<NewItem> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+    appBar: AppBar(
+      title: Text('Add a new item'),
+    ),
+      body: Text('The Form'),
     );
   }
 }
