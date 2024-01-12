@@ -14,7 +14,7 @@ class _NewItemState extends State<NewItem> {
       title: Text('Add a new item'),
     ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(12),
         child: Text('The Form'),
       ),
     );
