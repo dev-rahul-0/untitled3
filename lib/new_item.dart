@@ -27,7 +27,10 @@ class _NewItemState extends State<NewItem> {
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty || value.trim().length <= 1 || value.length >50)
-                  return 'Error message';
+                    {
+                      return 'Must be between 1 and 50 characters';
+                    }
+                  return null ;
                 },
               ),
               Row(
