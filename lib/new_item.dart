@@ -44,8 +44,9 @@ class _NewItemState extends State<NewItem> {
                       initialValue: '1',
                       validator: (value){
                         if (value == null || value.isEmpty || int.tryParse(value) == null ||int.tryParse(value)! <=0) {
-                          return ''
+                          return 'Must be a valid, Positive number.';
                         }
+                        return null;
                       },
                     ),
                   ),
