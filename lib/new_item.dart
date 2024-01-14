@@ -43,7 +43,9 @@ class _NewItemState extends State<NewItem> {
                       ),
                       initialValue: '1',
                       validator: (value){
-                        if (value == nul || value.isEmpty || int.tryParse(source))
+                        if (value == null || value.isEmpty || int.tryParse(value) == null ||int.tryParse(value)! <=0) {
+                          return ''
+                        }
                       },
                     ),
                   ),
