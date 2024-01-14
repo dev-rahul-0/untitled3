@@ -42,6 +42,9 @@ class _NewItemState extends State<NewItem> {
                         label: Text('Quantity'),
                       ),
                       initialValue: '1',
+                      validator: (value){
+                        if (value == nul || value.isEmpty || int.tryParse(source))
+                      },
                     ),
                   ),
                   const SizedBox(
