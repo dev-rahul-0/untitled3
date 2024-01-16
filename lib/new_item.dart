@@ -9,7 +9,12 @@ class NewItem extends StatefulWidget {
 }
 
 class _NewItemState extends State<NewItem> {
-  final _formKey = GlobalKey();
+  final _formKey = GlobalKey<FormState>();
+
+
+  void _saveItem() {
+  _formKey.currentState!.validate();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,7 +93,7 @@ class _NewItemState extends State<NewItem> {
                     child: const Text('Reset'),
                   ),
                   ElevatedButton(
-                      onPressed: () {}, child: const Text('Add Item'))
+                      onPressed: _saveItem, child: const Text('Add Item'))
                 ],
               )
             ],
