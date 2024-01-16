@@ -10,6 +10,7 @@ class NewItem extends StatefulWidget {
 
 class _NewItemState extends State<NewItem> {
   final _formKey = GlobalKey<FormState>();
+  var _enteredName = '';
 
 
   void _saveItem() {
@@ -41,7 +42,7 @@ class _NewItemState extends State<NewItem> {
                   return null ;
                 },
                 onSaved: (value){
-
+                  _enteredName = value!;
                 },
               ),
               Row(
