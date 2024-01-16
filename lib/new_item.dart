@@ -14,6 +14,7 @@ class _NewItemState extends State<NewItem> {
 
   void _saveItem() {
   _formKey.currentState!.validate();
+  _formKey.currentState!.save();
   }
   @override
   Widget build(BuildContext context) {
@@ -38,6 +39,9 @@ class _NewItemState extends State<NewItem> {
                       return 'Must be between 1 and 50 characters';
                     }
                   return null ;
+                },
+                onSaved: (value){
+
                 },
               ),
               Row(
